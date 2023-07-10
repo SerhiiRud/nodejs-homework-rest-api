@@ -9,7 +9,7 @@ const {
   deleteById,
   updateById,
   updateFavorite,
-} = require("../../controllers");
+} = require("../../controllers/contacts");
 
 router.get("/", getAll);
 
