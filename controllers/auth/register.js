@@ -1,7 +1,5 @@
 const bcrypt = require("bcrypt");
-const {
-  userModel: { User },
-} = require("../models");
+const { User } = require("../../models/user");
 const { HttpError } = require("../../helpers");
 
 const register = async (req, res) => {
@@ -18,7 +16,7 @@ const register = async (req, res) => {
 
   res.status(201).json({
     email: newUser.email,
-    name: newUser.name,
+    subscription: newUser.subscription,
   });
 };
 
